@@ -190,11 +190,3 @@ s'affiche sans détail : ne réécris rien à la main, copie. Le bloc A n'est qu
 `main` avec son déclencheur `push:` retiré (rien d'autre n'a bougé, donc rien d'autre à re‑vérifier).
 
 ---
-
-## Ce qui ne marchera pas, et pourquoi (pour ne pas chercher)
-- **Je ne peux pas faire les étapes 2 et 3 à ta place** : GitHub refuse qu'une app sans la permission
-  `workflows` écrive dans `.github/workflows/`, même avec un commit signé de ton nom (double test
-  récent : `refusing to allow a GitHub App to create or update workflow`).
-- **Ton token ne change rien** : la permission est évaluée sur l'app, pas sur le secret utilisé. Garde‑le,
-  ne le colle nulle part (surtout pas dans le chat).
-- **Redémarrer le serveur** reste manuel : le dépôt des fichiers est automatique, le `restart` non.
